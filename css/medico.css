@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,400&display=swap');
+
+*{
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: #94b1e6;
+    color: white;
+    margin-top: 2rem;
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+h3, p{
+    text-align: center;
+}
+
+#subtitulo {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+} 
+
+form {
+    flex-direction: column;
+    margin-top: 0.6rem;
+    margin-left: 20px;
+}
+
+form label{
+    display: flex;
+    flex-direction: column;
+}
+
+ form label span{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    
+}
+
+
+ form input{
+    background: #ffffff;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    color: rgb(206, 206, 206);
+    font-size: 1.2rem;
+    border: 1px solid #003391;
+    border-radius: 11px;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid #6C63FF;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    margin-left: 37.5rem;
+    margin-top: 0.8rem;
+}
+
+.btn::before{
+    content: ' ';
+    position: absolute;
+    background: #6C63FF;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.btn:hover::before{
+    width: 100%;
+}
+
+.campo{
+    margin-top: -35%;
+    margin-left: 40%;
+    margin-bottom: 1em;
+    margin-bottom: 0.2em;
+}
+
+.check{
+    margin-left: 40%;
+    margin-top: 7rem;
+}
+
+.check input{
+    margin-left: 4px;   
+}
+
+.check label{
+    margin-left: 8px;
+}
+
+.message{
+    margin-left: 73%;
+    margin-top: -6.6rem;
+}
+
+.message textarea{
+    border-radius: 11px;
+    margin-top: 7px;
+    font-size: 0.8rem;
+    padding:  0.5rem;
+    font-weight: bold;
+}

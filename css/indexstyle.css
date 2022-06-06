@@ -1,0 +1,13 @@
+body {
+    background-color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+td, i:fas fa-edit {
+    letter-spacing : -1000em; 
+    width:270px; 
+    height: 260px; 
+    background-image: url("https://www.flaticon.com/free-icons/trash");
+}
+i { 
+      
+}
