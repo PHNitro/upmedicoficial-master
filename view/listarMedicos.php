@@ -62,7 +62,7 @@
                 <td><?=$medico["password"]?></td>
                 <td><?=$medico["especialidade"]?></td>
 
-                <td><a href="../controller/alterarMedicoController.php?id=<?=$medico["id"]?>"><i class=''></a></i></td>
+                <td><a href="../controller/alterarMedicoController.php?id=<?=$medico["id"]?>"><i class='bx bx-edit-alt'></a></i></td>
                 <td><a href="../controller/excluirMedicoController.php?id=<?=$medico["id"]?>"><i class='bx bx-trash'></a></i></td>
                 </tr>
             <?php

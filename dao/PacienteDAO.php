@@ -8,7 +8,7 @@ class PacienteDAO{
         $this->pdo = Conexao::getInstance();
     }
 
-    public function salvar( PacienteDTO $pacienteDTO) {
+    public function salvar( PacienteDTO $pacienteDTO, $nome, $email) {
         try {
             $sql = 'INSERT INTO paciente(nome, data_nascimento, telefone, email, situacao, cpf, cep) VALUES(:nome, :data_nascimento,  :telefone, :email, :situacao, :cpf, :cep)';
 

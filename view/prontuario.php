@@ -9,17 +9,15 @@
     <link rel="styleSheet" href="/css/prontuario.css">
     <link href='https://' rel='stylesheet'>
     <link rel="stylesheet" href="https://">
-    <link rel="shortcut icon" href="/image/" />
-    <link rel="stylesheet" href="../css/prontuario.css">
+    <link rel="shortcut icon" href="/image/logoatras.png" />
+    <link rel="stylesheet" href="/css/prontuario.css">
 </head>
 
 <body>
 
-    <?php include './view/login.php/home.php';
-        include_once './DAO/ProntuarioDAO.php';
-        include_once './DAO/PacienteDAO.php';
-        include_once './DTO/ProntuarioDTO.php';
-        include_once './DTO/PacienteDTO.php';
+        <?php include './view/listarProntuario.php';
+        include_once './dao/ProntuarioDAO.php';
+        include_once './dao/PacienteDAO.php';
     ?>
 
 
@@ -33,7 +31,6 @@
 	 <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Prontuário Médico</title>
-    <link rel="stylesheet" href="../css/prontuario.css">
 </head>
 	<body>
     <div>
@@ -55,12 +52,12 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="nascimento">Data de Nascimento:</label>
-                      <input type="date" min="1900-01-01" max="2200-01-01" class="form-control" name="dtNasc" placeholder="data nascimento" autocomplete="off">
+                      <input type="date" min="1900-01-01" max="2001-01-01" class="form-control" name="dtNasc" placeholder="data nascimento" autocomplete="off">
                     </div>
                   </div>
                   <div class="col-3">
                     <div class="form-group mt-2">
-                      <label for="pesquisar">Pesquisar</label>
+                      <label for="pesquisar">Pesquisar:</label>
                       <input id="searchPacient" type="submit" class="form-control btn btn-primary" value="Pesquisar">
                     </div>
                   </div>
@@ -68,13 +65,38 @@
               </form>
           </div>
       </div>
-    </section>
     <link rel="stylesheet" href="/dao/ProntuarioDAO.php">
-    <section>
-      <div class="load">
-         <h2 class="text-dark font-weight-bold">Aguarde</h2>
+     <div>
+      <script>
+        $(document).ready(function () {
+    $("#divCarregando").show();
+    $(window).load(function () {
+        // Quando a página estiver totalmente carregada, remove o id
+        $('#divCarregando').fadeOut('slow');
+    });
+});
+      </script>
+      <style>
+        .progresso {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    height: 90px;
+    width: 120px;
+}
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js">
+      <div id="divCarregando" class="progresso">
+      <p>Aguarde...</p>
       </div>
-    </section>
-  </div>
+  </script>
 	</body>
 </html>

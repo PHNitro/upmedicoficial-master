@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet">
     <link rel="stylesheet" href="../lib/fontawesome-free-6.1.1-web/css/all.min.css">
     <script src="../lib/fontawesome-free-6.1.1-web/js/all.min.js"></script>
     <title>Listar Pacientes</title>
+    <h1>Listar Pacientes</h1>
     <style>
         table, tr, td, th{
             border: 1px solid black;
@@ -45,7 +46,7 @@
                 <td><?=$paciente["email"]?></td>
                 <td><?=$paciente["situacao"]?></td>
                 
-                <td><a href="../controller/excluirPacienteController.php?id=<?=$paciente["id"]?>"><i class='fa-solid fa-trash-can'></a></i></td>
+                <td><a href="../controller/excluirPacienteController.php?id=<?=$paciente["id"]?>"><i class='bx bx-edit-alt'></a></i></td>
                 <td><a href="../view/formAlterarPaciente.php?id=<?=$paciente["id"]?>"><i class='fa-solid fa-pen-to-square' style="color: red"; ></a></i></td>
                 </tr>
             <?php

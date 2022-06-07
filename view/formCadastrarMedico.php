@@ -17,8 +17,7 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div class="m-b-sm">
             <center>
-                <img alt="image" class="img-circle img-responsive" src="/image/uplogo.png"
-                                                     style="width: 180px">
+                <img alt="image" class="img-circle img-responsive" src="/image/uplogo.png" style="width:100px">
             </center>
            <div>
             <center>
@@ -37,11 +36,11 @@
                 </div>
                 <div class="form-group">
                     <label class="col-md-1 control-label">CPF: </label>
-                    <input id="cpf" name = "cpf" type="text" class="form-control" placeholder="cpf:" required="" maxlength = "20">
+                    <input id="cpf" name = "cpf" type="text" class="form-control" placeholder="cpf" required="" maxlength = "20">
                 </div>
                 <div class="form-group">
                     <label class="col-md-1 control-label">CRM: </label>
-                    <input id="crm" name = "crm" type="text" class="form-control" placeholder="crm:" required="" maxlength = "20">
+                    <input id="crm" name = "crm" type="text" class="form-control" placeholder="crm" required="" maxlength = "20">
                 </div>
                 <div class="form-group">
                     <label class="col-md-1 control-label">Data de Nascimento: </label>
@@ -49,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <label class="col-md-1 control-label">Celular: </label>
-                    <input id="celular" name = "celular" type="text" class="form-control"  maxlength = "14" placeholder="(xx) xxxx-xxxx" required="">
+                    <input id="celular" name = "celular" type="text" class="form-control"  maxlength = "11" placeholder="(xx) xxxx-xxxx" required="">
                 </div>
                 <div class="form-group">
                     <label class="col-md-1 control-label">E-mail: </label>
@@ -60,7 +59,7 @@
                     <input id="password" name = "password" type="password" class="form-control" onkeypress="mascara(this, password)" placeholder="sua senha" required="" maxlength = "100">
                 </div>
                 <td>
-                        <label for="cm">Clinico  Geral</label>
+                        <label for="cm">Clínico  Geral</label>
                         </td>
                         <td>
                             <input type="radio" name="especialidade" id="cli" value="Clinico Geral">
@@ -76,9 +75,9 @@
                 <input type="submit" value="Cadastrar">
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Salvar</button>
-                <button type="button" onClick="history.go(-1)" class="btn btn-warning block full-width m-b">Retornar</button>
+                <button type="button" onClick="history.go(-1)" class="btn btn-warning block full-width m-b">Retornar</button><link href="/view/login.php">
             </form>
-            <p class="m-t"> <small>Cadastro do Médico</small> </p>
+
            </div>
         </div>
    </div>

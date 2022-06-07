@@ -5,22 +5,17 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #4f97f5;
     font-family: 'Open Sans', sans-serif;
-}
-.img1{
-    height: 100px;
-
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0dbdb;
+    background-color: #dde2e4;
 }
 .content {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     border-radius: 15px;
     width: 960px;
     height: 50%;
@@ -31,7 +26,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #2956eb;
+    background-color: #2675db;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -49,7 +44,7 @@ body {
     color: #fff;
 }
 .title-second {
-    color: #328fe6;
+    color: #3271cf;
 }
 .description {
     font-size: 14px;
@@ -58,6 +53,9 @@ body {
 }
 .description-primary {
     color: #fff;
+}
+.description-second {
+    color: #7f8c8d;
 }
 .btn {
     border-radius: 15px;
@@ -79,17 +77,17 @@ body {
 }
 .btn-primary:hover {
     background-color: #fff;
-    color: dodgerblue;
+    color: #3271cf;
 }
 .btn-second {
-    background-color: #328fe6;
-    border: 1px solid #328fe6;
+    background-color: #3271cf;
+    border: 1px solid #3271cf;
     transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: #fff;
-    border: 1px solid #328fe6;
-    color: #328fe6;
+    border: 1px solid #3271cf;
+    color: #586caf;
 }
 .first-content {
     display: flex;
@@ -108,13 +106,40 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.social-media {
+    margin: 1rem 0;
+}
+.link-social-media:not(:first-child){
+    margin-left: 10px;
+}
+.link-social-media .item-social-media {
+    transition: background-color .5s;
+}
+.link-social-media:hover .item-social-media{
+    background-color: #3271cf;
+    color: #fff;
+    border-color: #3271cf;
+}
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+}
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+}
 .form {
     display: flex;
     flex-direction: column;
     width: 55%;
 }
 .form input {
-    height: 45px;
+    height: 30px;
     width: 100%;
     border: none;
     background-color: #ecf0f1;
@@ -134,6 +159,9 @@ input:-webkit-autofill
     color: #7f8c8d;
     padding: 0 5px;
 }
+
+/* second content*/
+
 .second-content {
     position: absolute;
     display: flex;
@@ -156,6 +184,8 @@ input:-webkit-autofill
     text-transform: capitalize;
 }
 
+
+
 .sign-in-js .first-content .first-column {
     z-index: -1;
 }
@@ -173,13 +203,13 @@ input:-webkit-autofill
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: slidein 1.3s; 
+    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 
     z-index: 12;
 }
 
 .sign-up-js .content::before {
-    animation: slideout 1.3s; 
+    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 
     z-index: 12;
 }
@@ -197,19 +227,22 @@ input:-webkit-autofill
     z-index: 13;    
 }
 
+
+/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
 .sign-in-js .first-content .second-column {
 
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 1.3s; 
+    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 }
 
 .sign-up-js .second-content .second-column {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 1.3s; 
+    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 }
 
+/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
 
 @keyframes deslocamentoEsq {
 
@@ -222,13 +255,13 @@ input:-webkit-autofill
     25% {
         left: -80px;
         opacity: .5;
-
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
     }
 
     50% {
         left: -100px;
         opacity: .2;
- 
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
     }
 
     to {
@@ -248,11 +281,13 @@ input:-webkit-autofill
 
     25% {
         left: 80px;
-  
+        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
     }
 
     50% {
         left: 100px;
+        /* z-index: 12; NÃO HÁ NECESSIDADE*/
+        /* background-color: yellow;  Exemplo que dei no vídeo*/
     }
 
     to {
@@ -262,6 +297,7 @@ input:-webkit-autofill
 }
 
 
+/*ANIMAÇÃO CSS*/
 
 @keyframes slidein {
 
@@ -316,5 +352,164 @@ input:-webkit-autofill
     to {
         left: 0;
         width: 40%;
+    }
+}
+
+/*VERSÃO MOBILE*/
+@media screen and (max-width: 1040px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .first-content, .second-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .first-column, .second-column {
+        width: 100%;
+    }
+    
+    .sign-in-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+
+    }
+
+    .form {
+        width: 90%;
+    }
+    
+    /* ANIMAÇÃO MOBILE CSS*/
+
+    @keyframes deslocamentoEsq {
+
+        from {
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -80px;
+            opacity: .5;
+            /* z-index: 12; NÃO HÁ NECESSIDADE */
+        }
+    
+        50% {
+            top: -100px;
+            opacity: .2;
+            /* z-index: 12; NÃO HÁ NECESSIDADE */
+        }
+    
+        to {
+            top: -110px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    
+    @keyframes deslocamentoDir {
+    
+        from {
+            top: 0;
+            z-index: 12;
+        }
+    
+        25% {
+            top: 80px;
+            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+        }
+    
+        50% {
+            top: 100px;
+            /* z-index: 12; NÃO HÁ NECESSIDADE*/
+            /* background-color: yellow;  Exemplo que dei no vídeo*/
+        }
+    
+        to {
+            top: 110px;
+            z-index: -1;
+        }
+    }
+    
+    
+    
+    @keyframes slidein {
+    
+        from {
+            top: 0;
+            height: 40%;
+        }
+    
+        25% {
+            top: 5%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        to {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideout {
+    
+        from {
+            top: 60%;
+            height: 40%;
+        }
+    
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 5%;
+            height: 50%;
+        }
+    
+        to {
+            top: 0;
+            height: 40%;
+        }
+    }
+   
+}
+
+@media screen and (max-width: 740px) {
+    .form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form {
+        width: 100%;
     }
 }

@@ -16,9 +16,9 @@ $medico = $MedicoDAO->findById( $idMedico );
 ?>
 
 <div class="formContainer">
-    <div id="img-login"> <img  src="/img/alterar-medico.png" alt=""></div>
-    <form id="" action="/controller/medico/alterarMedicoController.php" method="post">
-    <input type="hidden" name="idMedico" value="<?php echo $cliente["id"] ?>">
+    <div id="img-login"> <img  src="/image/alterar-medico.png" alt=""></div>
+    <form id="" action="/controller/alterarMedicoController.php" method="post">
+    <input type="hidden" name="idMedico" value="<?php echo $medico["id"] ?>">
                     <div class="inputbox">
                         <input type="text" name="nome" id="nome" value="<?php echo $medico["nome"] ?>">
                         <label for="nome">Nome Completo</label>
@@ -53,7 +53,7 @@ $medico = $MedicoDAO->findById( $idMedico );
     <div style="text-align: center;">
     <?php
 if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
-    echo "Alterado com sucesso!!!!";
+    echo "Alterado com sucesso!!!";
 }
 ?>
     </div>

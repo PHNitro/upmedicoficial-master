@@ -2,7 +2,7 @@
 <center>
         <img src="/image/uplogo.png" alt="" class="up"
                                                      style="width: 300px">
-        <form action="/view/home.php" method="post">
+        <form action="/view/login.php" method="post">
         </center>
         <p>Bem-Vindo!</p>
         <p>Informe os dados de envio</p>

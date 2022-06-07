@@ -6,41 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
-    <h1>Prontuário</h1>
+<center>
+    <h1>Prontuário Geral</h1>
+</center>
 <body>
+<style type="text/css">
+
+body {
+    background-color: lightblue;
+}
+table {
+    box-shadow: 0px 0px 5px black;   
+    margin-bottom: 0;
+    width: 100%;
+}
+
+table th, table td {
+    border: 2px solid darkblue; 
+    padding-left: 0px;
+}
+ 
+.centro {
+    text-align: center;
+}
+
+.direita {
+    padding: 1px;
+    text-align: right;
+}
+
+input[type='checkbox'] {
+    text-align: center;
+    float: left;
+}
+</style>
+
+<table id="arquivado">
+    <thead>
         <tr>
-            <th>Número: </th>
-            <th>Data de Criação: </th>
-            <th>Ativo: </th>
-            <th>Relatorio Medico: </th>
-            <th>Medico ID: </th>
-            <th>Paciente ID: </th>
-            
+            <th class="centro" colspan="3">Pedidos por exame</th>
         </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
 
-        <?php
+<table id="disponiveis">
+    <thead>
+        <tr>
+            <th class="centro" colspan="3">Selecione os Pacientes:</th> 
+        </tr>
+        <tr>
+            <th class="centro">Paulo</th>
+            <th class="centro">Samuel</th>
+            <th class="centro">Gabriel</th class="">
+            <td class="">            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="centro"><input type="checkbox" name="adicionar"  />Caso grave</td>
+            <td class="centro">Infecção</td>
+            <td class="centro">Necessário Cirurgia</td>
+            <td class="centro">Paulo</td>     
+        </tr>
+        <tr>
+            <td class="centro"><input type="checkbox" name="adicionar"  />Caso médio grave</td>
+            <td class="centro">Braço quebrado</td>
+            <td class="centro">Pontos</td>
+            <td class="centro">Samuel</td>     
+        </tr>
+        <tr>
+            <td class="centro"><input type="checkbox" name="adicionar"  />Caso menos grave</td>
+            <td class="centro">Dor de cabeça</td>
+            <td class="centro">A base de remédio indicado pelo médico</td>
+            <td class="centro">Gabriel</td> 
+    </tbody>
+</table>
 
-        require_once '/dao/ProntuarioDAO.php';
+<script type="text/javascript">
+//consultando todos os input to type checkbox na pagina
+//caso a sua pagina possua mais inputs deste tipo, você deve tornar o filtro abaixo mais especifico.
+var adicionar = document.querySelectorAll("input[type='checkbox']");
 
-        $ProntuarioDAO = new ProntuarioDAO();
-        $Prontuario = $ProntuarioDAO->findAll();
+//consultando as tabelas que irão armazenar as disciplinas disponiveis e as que o aluno está matriculado.
+var matriculado = document.querySelector("#arquivado tbody");
+var disponiveis = document.querySelector("#disponiveis tbody");
 
-        foreach ($Prontuario as $Prontuario) {
-            echo "<td>{$Prontuario["id"]}</td>";
-            echo "<td>{$Prontuario["numero"]}</td>";
-            echo "<td>{$Prontuario["data_criacao"]}</td>";
-            echo "<td>{$Prontuario["ATIVO"]}</td>";
-            echo "<td>{$Prontuario["paciente_id"]}</td>";
-            
-            
+//definindo o evento que irá mover a linha, é importante instanciar apenas um evento para todos os checkbox.
+var adicionarOnClick = function () {
+    //caso o checkbox esteja marcado, mova a linha para a tabela de matriculados, caso contrario para a tabela de disciplinas disponiveis.
+    var escopo = this.checked ? matriculado : disponiveis;
+    //this é o checkbox que foi clickado, o parentNode dele é a celula atual, e o parentNode da celula é a linha (arvore).
+    escopo.appendChild(this.parentNode.parentNode);
+};
 
-            echo " <td align='center'><a href='../controller/excluirProntuarioController.php?id={$Prontuario["id"]}'><i class='fa-solid fa-trash-can'></a></i></td>";
-            echo " <td align='center'><a href='../controller/alterarProntuarioControler.php?id={$Prontuario["id"]}'><i class='fa-solid fa-pen-to-square'></a></i></td>";
-        }
-        echo "</table>";
-        ?>
-        <a href="../controller/cadastrarProntuarioController.php">Cadastrar</a>
-        <a href="">Sair</a> 
-
+//registrando o evento criado acima para todos os checkbox.
+for (var indice in adicionar) {
+    adicionar[indice].onclick = adicionarOnClick;
+}
+</script>
 </body>
 </html>

@@ -20,10 +20,15 @@ $pacienteDTO->setCpf($cpf);
 $pacienteDTO->setCep($cep);
 $pacienteDTO->setSituacao($situacao);
 
-$error[1] = "<div class='alert alert-success mt-3' role='alert'>Cadastrado com sucesso!</div>";
+$error[1] = "Cadastrado com sucesso!";
+$error[2] = "Já existe um paciente cadastrado com o email " . $email ;
 
-$pacienteDAO = new PacienteDAO();
-
-if ($pacienteDAO->salvar($pacienteDTO)) {
-    header( "Location: ../view/formCadastrarPaciente.php?msg={$error[1]}" );
+if ( empty( $paciente ) ) {
+    if ( $pacienteDAO->salvar( $pacienteDTO, $email, $senha ) ) {
+        header( "Location: /view/formCadastrarPaciente.php?msg={$error[1]}" );
+    }
+} else {
+    header( "Location: /view/formCadastrarPacienteErro.php?msg={$error[2]}" );
 }
+
+?>
