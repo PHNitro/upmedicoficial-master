@@ -10,6 +10,7 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body background="/image/reservation_bg.png">
+<img alt="image" class="" src="/image/uplogo.png">
     <div class="container">
         <div class="content first-content">
             <div class="first-column">

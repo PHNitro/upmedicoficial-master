@@ -2,7 +2,7 @@
 require_once '../dto/MedicoDTO.php';
 require_once '../dao/MedicoDAO.php';
 
-$id = $_POST["ID"];
+$id = $_POST["id"];
 $nome = $_POST["nome"];
 $data = $_POST["datanascimento"];
 $email = $_POST["email"];

@@ -17,7 +17,7 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div class="m-b-sm">
             <center>
-                <img alt="image" class="img-circle img-responsive" src="/image/uplogo.png" style="width:100px">
+                <img alt="image" class="img-circle img-responsive" src="/image/uplogo.png" style="width: 200px">
             </center>
            <div>
             <center>
@@ -32,7 +32,7 @@
             <form class="m-t" role="form" method="post" action="../controller/cadastrarMedicoController.php">
                 <div class="form-group">
                     <label class="col-md-1 control-label">Nome: </label>
-                    <input id="nome" name = "nome" type="name" class="form-control" placeholder="nome" required="" maxlength = "14">
+                    <input id="nome" name = "nome" type="name" class="form-control" placeholder="nome" required="" maxlength = "20">
                 </div>
                 <div class="form-group">
                     <label class="col-md-1 control-label">CPF: </label>

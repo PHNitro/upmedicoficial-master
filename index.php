@@ -11,13 +11,9 @@
 <body>
 <nav id="menu-h">
         <ul>
-            <li>
-                <a href="index.php">
-                    Home
-                </a>
-            </li>
+            <li><a href="#">Home</a></li>
 
-            <li><a href="view/prontuario.php">Prontuários</a></li>
+            <li><a href="view/listarProntuario.php">Prontuários</a></li>
             
             <li><a href="view/listarMedicos.php">Médicos</a></li>
             

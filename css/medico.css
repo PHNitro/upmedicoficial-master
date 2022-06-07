@@ -48,10 +48,11 @@ form label{
 
  form input{
     background: #ffffff;
+    
     width: 300px;
     height: 50px;
     padding: 0 0.5rem;
-    margin-top: 1rem;
+    margin: rgb(19, 18, 18);
     color: rgb(206, 206, 206);
     font-size: 1.2rem;
     border: 1px solid #003391;
@@ -96,7 +97,7 @@ form label{
 
 .check{
     margin-left: 40%;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .check input{
